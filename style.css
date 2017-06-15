@@ -1,0 +1,17 @@
+body  img {
+	width: 220px;
+	height: 180px;
+	
+}
+
+body {
+	position: relative;
+}
+
+
+.main-container {
+	position: absolute;
+	left: 40%;
+	text-align: center;
+}
+
