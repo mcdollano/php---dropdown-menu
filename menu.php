@@ -37,7 +37,7 @@
 
 			 foreach ($items as $item) {
 
-			 	if(!isset($_POST['submit']) || $_POST['category'] == $item['category'])
+			 	if(!isset($_POST['submit']) || $_POST['category'] == $item['category'] || $_POST['category'] == 'ALL')
 			 	{
 				 	echo "<img src =" . $item['img'] . ">" . "<br>";
 					echo $item['name'] . "<br>";
@@ -45,9 +45,10 @@
 					echo $item['description'] . "<br>";					
 				}
 			}
-			
+
 			function create_dropdown($name,$options){
 				$output = "<select name = '$name'>";
+				$output .= "<option> ALL</option>";
 				foreach ($options as $value) {
 					if(isset($_POST[$name]) && $_POST[$name] == $value){
 						$output .= "<option selected value = '$value' > $value </option>";
